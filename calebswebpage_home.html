@@ -8,13 +8,47 @@
 
     <link rel="stylesheet" href="stylesheets/homepage.css">
 
+    <style>
+        .header_grid
+        {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            justify-content: center;
+        }
+
+        .grid_attrib
+        {
+            font-family: Arial;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20px;
+            transition-duration: 0.5s;
+        }
+
+        .grid_attrib:hover
+        {
+            opacity: 0.6;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+    </style>
+
     <h2 class="header_title">Caleb's Collection of Little Works</h2>
+
+
+    <div class="header_grid">
+        <div class="grid_attrib">About</div>
+        <div class="grid_attrib">Video Games</div>
+        <div class="grid_attrib">Animation</div>
+        <div class="grid_attrib">Video Production</div>
+    </div>
     
     <div class="header_div">
         <img class="header_image" src="Images/page1temp.jpg">
     </div>
 
-    <button onclick="document.location='calebswebpage_secondpage.html'">click me for a surprise</button>
-   
+    <div class="button">
+        <button onclick="document.location='calebswebpage_secondpage.html'">click me for a surprise</button>
+    </div>
     
 </html>

@@ -2,10 +2,28 @@
 <html>
     <link rel="stylesheet" href="stylesheets/homepage.css">
     
-    <div class="header_div">
-        <img class="header_image" src="Images/smilehd.gif">
+    <style>
+        .image_audio
+        {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <div>
+        <div class="header_div">
+            <img class="header_image" src="Images/smilehd.gif">
+        </div>
+
+        <div class="image_audio">
+            <audio controls loop>
+                <source src="Audio/go_alert2.wav">
+            </audio>
+        </div>
     </div>
+    
 
-    <button onclick="document.location='calebswebpage_home.html'">click me to go back, tehe.</button>
-
+    <div class="button">
+        <button onclick="document.location='calebswebpage_home.html'">click me to go back, tehe.</button>
+    </div>
 </html>

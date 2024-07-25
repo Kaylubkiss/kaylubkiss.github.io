@@ -1,6 +1,8 @@
 .header_image {
-    width: 600px;
+    max-width: 600px;
+    min-width: 300px;
     border-radius: 5px;
+    padding: 20px;
 }
 
 .header_div {
@@ -13,4 +15,11 @@
     font-size: 50px;
     display: flex;
     justify-content: center;
+}
+
+.button
+{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
 }
