@@ -3,16 +3,45 @@
 
     <link rel="stylesheet" href="stylesheets/headerframe.css">
 
-    <div class="header_grid">
-        <div class="grid_attrib" onclick="document.location='calebswebpage_home.html'">Home</div>
-        <div class="grid_attrib" onclick="document.location='calebswebpage_secondpage.html'">About</div>
-        <div class="grid_attrib">Video Games</div>
-        <div class="grid_attrib">Animation</div>
-        <div class="grid_attrib">Video Production</div>
-    </div>
+    <script type="module" src="Javascript/navigation.js"></script>
 
-    <div>
-        <img src="Images/page_videogames/onion_icon.jpg" style="padding: 20px; filter: drop-shadow(-10px -5px 10px black);">
+    <secondnav-header></secondnav-header>
+
+    <style>
+        .select_grid
+        {
+            transition-duration: 0.1s;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+        }
+
+        .select_item
+        {
+            padding: 40px;
+            transition-duration: 0.4s;
+        }
+
+        .select_item:hover
+        {
+            filter: drop-shadow(-10px 5px 10px black);
+            cursor:pointer;
+            transition-duration: 0.3s;
+        }
+    </style>
+
+
+
+    <div class="select_grid">
+        <div class="select_item" onclick="document.location='calebswebpage_videogames_onion.html'">
+            <img src="Images/page_videogames/onion_icon.jpg">
+        </div>
+        <div class="select_item">
+            <img src="Images/page_videogames/software_render.gif" width="300px">
+        </div>
+        <div class="select_item">
+            <img src="Images/page_videogames/somniphobia_icon.jpg">
+        </div>
     </div>
 
 </html>
