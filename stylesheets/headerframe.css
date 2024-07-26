@@ -6,11 +6,10 @@
 
 .grid_attrib {
     font-family: Arial;
-    padding-top: 150px;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-top: 150px;
+    margin-left: 40px;
+    margin-right: 40px;
     font-size: 20px;
-    transition-duration: 0.5s;
 }
 
 .grid_attrib:hover {
