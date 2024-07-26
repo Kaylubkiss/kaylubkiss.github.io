@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="stylesheets/homepage.css">
     
+    <link rel="stylesheet" href="stylesheets/homepage.css">
+
+
+    <script type="module" src="Javascript/navigation.js"></script>
+
     <style>
         .image_audio
         {
@@ -10,9 +14,20 @@
         }
     </style>
 
+    <style>
+        #smileImage
+        {
+            min-width: 100px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+    </style>
+
+    <secondnav-header></secondnav-header>
+
     <div>
         <div class="header_div">
-            <img class="header_image" src="Images/smilehd.gif">
+            <img id="smileImage" src="Images/smilehd.gif" width="1200px">
         </div>
 
         <div class="image_audio">
@@ -21,9 +36,5 @@
             </audio>
         </div>
     </div>
-    
 
-    <div class="button">
-        <button onclick="document.location='calebswebpage_home.html'">click me to go back, tehe.</button>
-    </div>
 </html>
