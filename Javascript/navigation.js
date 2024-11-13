@@ -7,7 +7,7 @@ class HomeNavigationHeader extends HTMLElement
         \
         <div class='header_grid'>\
         <div class='grid_attrib'>About</div>\
-            <div class='grid_attrib' onclick=\"document.location='calebswebpage_videogames_homepage.html'\">Programming</div>\
+            <div class='grid_attrib' onclick=\"document.location='videogames/vg_home.html'\">Programming</div>\
             <div class='grid_attrib'>Animation</div>\
             <div class='grid_attrib'>Video Production</div>\
         </div>"
@@ -24,9 +24,9 @@ class SecondaryPageNavHeader extends HTMLElement
         this.innerHTML = "\
         <link rel='stylesheet' href='stylesheets/headerframe.css'>\
         <div class='header_grid'>\
-            <div class='grid_attrib' onclick=\"document.location='calebswebpage_home.html'\">Home</div>\
+            <div class='grid_attrib' onclick=\"document.location='home.html'\">Home</div>\
             <div class='grid_attrib'>About</div>\
-            <div class='grid_attrib'onclick=\"document.location='calebswebpage_videogames_homepage.html'\">Programming</div>\
+            <div class='grid_attrib'onclick=\"document.location='videogames/vg_home.html'\">Programming</div>\
             <div class='grid_attrib'>Animation</div>\
             <div class='grid_attrib'>Video Production</div>\
         </div>\
