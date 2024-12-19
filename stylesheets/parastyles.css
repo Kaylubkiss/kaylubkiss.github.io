@@ -1,0 +1,17 @@
+.paragraph_style{
+    display: flex; 
+    justify-content: center;
+    font-family: Arial;
+}
+
+div.list_center{
+    text-align: center;
+    font-size: 100%;
+}
+
+ul.list_style{ 
+    display: inline-block;
+    text-align: left;
+    font-family: Arial;
+    font-size: 100%;
+}
