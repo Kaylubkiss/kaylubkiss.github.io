@@ -1,3 +1,5 @@
+
+//NOTE: some headers are now commented out in the html string here.
 class HomeNavigationHeader extends HTMLElement
 {
     connectedCallback()
@@ -7,9 +9,9 @@ class HomeNavigationHeader extends HTMLElement
         \
         <div class='header_grid'>\
         <div class='grid_attrib'>About</div>\
-            <div class='grid_attrib' onclick=\"document.location='videogames/vg_home.html'\">Programming</div>\
+            <!-- <div class='grid_attrib' onclick=\"document.location='videogames/vg_home.html'\">Programming</div>\
             <div class='grid_attrib'>Animation</div>\
-            <div class='grid_attrib'>Video Production</div>\
+            <div class='grid_attrib'>Video Production</div> -->\
         </div>"
     }
 }
