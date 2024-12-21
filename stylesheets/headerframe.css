@@ -9,11 +9,14 @@
     margin-top: 150px;
     margin-left: 40px;
     margin-right: 40px;
-    font-size: 20px;
+    font-size: 175%;
+    color: lightblue;
+    transition-duration: 0.3s;
 }
 
 .grid_attrib:hover {
-    opacity: 0.6;
     cursor: pointer;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
+    color: white;
+    filter: drop-shadow(-5px 10px 10px black);
 }

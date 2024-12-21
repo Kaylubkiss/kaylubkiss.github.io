@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-    <script type="module" src="Javascript/navigation.js"></script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href=
+    "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity=
+    "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/parastyles.css">
+    <script type="module" src="../Javascript/navigation.js"></script>
+</head>
+   
+<body>
+    <div class="container text-center">
+        <div class="embed-responsive embed-responsive-16by9" style="margin-top: 50px;">
+          <iframe class="embed-responsive rounded border border-info" src="https://www.youtube.com/embed/lMjqA9yCt-8?si=cb4_9cJvVI1g1W64" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
 
-    <secondnav-header></secondnav-header>
+    <div class="container text-center" style="margin-top: 10px;">
+        <div class="text-secondary border border-dark bg-light rounded">
+          <p>
+            During the second semester of my freshman year, we had the distinct challenge to start making a game
+            starting with almost nothing. Just C and the Alpha Engine API. We seemed to be successful in creating
+            an emotionally impactful little platformer by the end.
+          </p>
+        </div>
+      </div>
 
-    <p style="margin-left: 200px; margin-top: 50px">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lMjqA9yCt-8?si=cb4_9cJvVI1g1W64" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </p>
+      <div class="container text-center" style="font-family: Arial; margin-top: 10px;">
+        <div class="row">
 
-    <p>
-        Using C and the Alpha Engine API in 4 months, we fortunately were able to create a satisfactory experience that moved some to tear up, no 'onion-underneath-the-eyes' modifier needed. It was a challenging but important growth experience for me personally as a novice programmer.
-    </p>
+          <div class="col">
+            <div class="text-white border border-dark bg-info rounded">
+              <em><b>Credits:</b></em>
+            </div>
+            <ul style="text-align: left; list-style-type: none;">
+                <li>-<b>Alex Elizarov</b> - Programmer, Engine</li>
+                <li>-<b>Caleb Kissinger</b> - Programmer, Story</li>
+                <li>-<b>Corbyn Lamar</b> - Programmer, Gameplay</li>
+                <li>-<b>K Preston</b> - Programmer, Audio</li>
+                <li>-<b>Salem Richie</b> - Programmer, Gameplay, Engine</li>
+                <li>-<b>Ashlyn White</b> - Programmer, Gameplay</li>
+            </ul>
+          </div>
+          
+          <div class="col">
+            <div class="border border-dark rounded">
+              <b>Personal Contributions:</b>
+            </div>
+            <div class="list_center">
+                <ul class="list_style">
+                    <li>gameplay (player movement)</li>
+                    <li>gameplay objects (windmill and cloud)</li> 
+                    <li>story writing and implementation</li> 
+                    <li>level design</li>
+                    <li>camera code framework (targeting player position and lerping to that position)</li>
+                    <li>implemented and created cutscenes (visuals only)</li>
+                    <li>I edited this trailer!</li>
+                </ul>
+              </div>
+            </div>
 
-    <p>
-        What I did: gameplay (player movement), gameplay objects (windmill and cloud), story creation and writing, level design, camera code framework (targeting player position and lerping to that position), cutscene creation and implementation of those cutscenes and frames (visuals only). I edited this trailer! :
-    </p>
+          </div>
+</body>
 </html>
+
