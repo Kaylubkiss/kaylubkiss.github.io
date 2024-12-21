@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <script type="module" src="Javascript/navigation.js"></script>
-
-  <secondnav-header></secondnav-header>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href=
+    "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity=
+    "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/parastyles.css">
+    <script type="module" src="Javascript/navigation.js"></script>
+  </head>
   
-  <p style="margin-left: 200px; margin-top: 50px">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_9u-39WLxEY?si=9yXGHv7HIUvg553b" title="Somniphobia Prototype" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </p>
+  <body>
+    <div class="container text-center">
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 50px;">
+        <iframe class="embed-responsive rounded border border-info" src="https://www.youtube.com/embed/_9u-39WLxEY?si=9yXGHv7HIUvg553b" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+    <div class="container text-center" style="margin-top: 10px;">
+      <div class="text-secondary border border-dark bg-light rounded">
+        <p>
+          Survival horror seemed like an interesting challenge for the bunch of us programmers and designers. 
+          No actual artists or musicians involved, we are currently investing hard into making art pipelines 
+          to create a stylistic and scary experience for players, with some game design twists that some haven't 
+          seen in a horror game before.
+        </p>
+      </div>
+    </div>
 
-  <p>
-    Survival horror seemed like an interesting challenge for the bunch of us programmers and designers. No actual artists or musicians involved, we are currently investing hard into making art pipelines to create a stylistic and scary experience for players, with some game design twists that some haven't seen in a horror game before.
-  </p>
 
-  <p>
-    What I did: enemy AI & sound design & animation code, pixelation shader, co-wrote player character gameplay code. 
+    <div class="container text-center" style="font-family: Arial; margin-top: 10px;">
+      <div class="row">
+  
+        <div class="col">
+          <div class="text-white border border-dark bg-info rounded">
+            <em><b>Credits:</b></em>
+          </div>
+          <ul style="text-align: left; list-style-type: none;">
+            <li>-<b>Jordan Fowler</b> - Level Designer</li>
+            <li>-<b>Aaron Hansen</b> - Programmer, AI, Randomization</li>
+            <li>-<b>Michael Haynes</b> - Producer, Programmer, Level Generation, Particles</li>
+            <li>-<b>Gabe Hoefler</b> - Narrative Director</li>
+            <li>-<b>Caleb Kissinger</b> - Programmer, AI, Animation Lead</li>
+            <li>-<b>Dong Ta</b> - Audio Lead</li>
+            <li>-<b>Haoran Wang</b> - Tech Lead, Level Generation</li>
+          </ul>
+        </div>
 
-​
+        <div class="col">
+          <div class="border border-dark rounded">
+            <b>Personal Contributions:</b>
+          </div>
+          <div class="list_center">
+              <ul class="list_style">
+                  <li>Enemy AI FSM</li>
+                  <li>Pixelation Shader</li>
+                  <li>Player Character Gameplay (partial)</li>
+                  <li>Various Player and Enemy Animations</li> 
+                  <li>Audio Assistance</li> 
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-Currently working on: character models & general sound design.
-
-​
-
-Contribution Goals: provide more nuance to enemy behavior, help create more assets for the game, add lighting to shader. 
-  </p>
-
+  </body>
 </html>
