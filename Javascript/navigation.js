@@ -8,10 +8,12 @@ class HomeNavigationHeader extends HTMLElement
         <link rel='stylesheet' href='stylesheets/headerframe.css'>\
         \
         <div class='header_grid'>\
-        <div class='grid_attrib'>About</div>\
+            <div class='grid_attrib' onclick=\"document.location='about.html'\">About</div>\
+            \
             <!-- <div class='grid_attrib' onclick=\"document.location='videogames/vg_home.html'\">Programming</div>\
             <div class='grid_attrib'>Animation</div>\
             <div class='grid_attrib'>Video Production</div> -->\
+            \
         </div>"
     }
 }
