@@ -24,6 +24,11 @@
     .carousel-caption { top: 100%; }
     .carousel-inner { overflow: visible; }
     .carousel-control-next, .carousel-control-prev, .carousel-indicators { bottom: 3rem; }
+    .ratio-16x9 {
+      --bs-aspect-ratio: calc(9 / 16 * 75%);
+    }
+}
+
   </style>
   
   <body>
@@ -100,9 +105,10 @@
         </p>
       </div>
      
-      <div class="container w-75 mt-5">
+      <div class="container mt-5">
         <div class="ratio ratio-16x9">
-          <iframe src="../Images/page_onion_process/onion_initial_intro.mp4" alt="Onion Video"></iframe>
+          <iframe src="../Images/page_onion_process/onion_initial_intro.mp4" style="button.close {display: none !important;}"  alt="Onion Video">
+          </iframe>
         </div>
         <div class="container rounded mt-3">
           <p>This was my first draft of the opening cutscene. I wanted to highlight the
@@ -132,10 +138,8 @@
         </div>
       </div>
 
-      <div class="container w-75 mt-5">
-        <div class="ratio ratio-16x9">
-          <iframe src="../Images/page_onion_process/onion_ending_original.png" alt="ending frame"></iframe>
-        </div>
+      <div class="container mt-5 text-center">
+        <img class="w-75" src="../Images/page_onion_process/onion_ending_original.png" alt="ending frame">
 
         <div class="container">
           I'm a sucker for sappy endings. I took quite a bit of time developing the emotion of this scene. Here, a long shot,
@@ -163,10 +167,8 @@
         </div>
       </div>
 
-      <div class="container w-75 mb-5 mt-5">
-        <div class="ratio ratio-16x9">
-          <iframe src="../Images/page_onion_process/onion_ending_frames293.png" alt="ending frame"></iframe>
-        </div>
+      <div class="container mb-5 mt-5 text-center">
+          <img class="w-75" src="../Images/page_onion_process/onion_ending_frames293.png" alt="ending frame">
       </div>
 
 
