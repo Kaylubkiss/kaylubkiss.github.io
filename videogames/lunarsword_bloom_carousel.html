@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+      <link rel="stylesheet" href="../stylesheets/parastyles.css">
+    </head>
+  </head>
+
+  <div class="container mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb --bs-breadcrumb-padding-y: 100px">
+        <li class="breadcrumb-item"><a href="../index.html">Caleb's Collection</a></li>
+        <li class="breadcrumb-item" aria_current="page"><a href="lunarsword.html">Lunar Sword</a></li>
+        <li class="breadcrumb-item active">Bloom Shader</li>
+      </ol>
+    </nav>
+  </div>
+
+  <style>
+    .carousel { overflow: hidden; padding-bottom: 4rem; }
+    .carousel-caption { top: 100%; }
+    .carousel-inner { overflow: visible; }
+    .carousel-control-next, .carousel-control-prev, .carousel-indicators { bottom: 4rem; }
+    .ratio-16x9 {
+      --bs-aspect-ratio: calc(9 / 16 * 100%);
+    }
+  </style>
+
+  <body>
+
+    <div class="container">
+
+      <div class="container mt-5">
+        <div class="ratio ratio-16x9">
+          <iframe src="../Images/page_lunarsword_bloom/ls_toggling.mov" style="button.close {display: none !important;}"  alt="Onion Video">
+          </iframe>
+        </div>
+        <div class="container bg-light rounded rounded mt-3 text-center">
+          <p>Messing with the settings.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+
+        <div class="col mt-5 text-center">
+          <img class="w-75" src="../Images/page_lunarsword_bloom/ls_bloom_0.jpg" alt="ending frame">
+
+          <div class="container bg-light rounded mt-3">
+            Without Bloom.
+          </div>
+        </div>
+
+        <div class="col mt-5 text-center">
+          <img class="w-75" src="../Images/page_lunarsword_bloom/ls_bloom_1.jpg" alt="ending frame">
+
+          <div class="container bg-light rounded mt-3">
+            With Bloom.
+          </div>
+        </div>
+
+        <div class="container text-center mt-3 mb-3">
+          <a class="btn btn-primary" href="https://github.com/Kaylubkiss/Project-Samples/tree/main/Academic%20Projects/Graphics/Bloom%20-%20GAM200%2C%20GAM250">Source Code</a>
+        </div>
+
+      </div>
+  </body>
+
+
+</html>
