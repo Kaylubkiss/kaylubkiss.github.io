@@ -5,41 +5,35 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href=
         "../bootstrap/css/bootstrap.min.css"> 
+    <script type="module" src="../bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../stylesheets/parastyles.css">
     <script type="module" src="Javascript/navigation.js"></script>
-    <link rel="stylesheet" href=
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../font-awesome/css/brands.min.css">
   </head>
-  
 
   <div class="container mt-3">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb rounded">
         <li class="breadcrumb-item"><a href="../index.html">Caleb's Collection</a></li>
         <li class="breadcrumb-item active" aria_current="page">Somniphobia</li>
-
-        <div class="container text-center mt-3">
-          <a class="btn btn-primary mt-1" href="https://store.steampowered.com/app/3606150/Somniphobia/">
-            <i class="fa fa-steam"></i> Play on Steam!
-          </a>
-          <a class="btn btn-primary mt-1" href="https://games.digipen.edu/games/somniphobia">
-            <i class="fa fa-gamepad"></i> Play on Game Gallery!
-          </a> 
-        </div>
-
       </ol>
     </nav>
+
+    <div class="container">
+      <h1><b>Somniphobia</b>
+        <a class="btn btn-primary pl-2 pr-2" href="https://store.steampowered.com/app/3606150/Somniphobia/">
+          <i class="fa fa-steam-square"></i>Play on Steam!
+        </a>
+      </h1>
+       
+    </div>
   </div>
 
+  
   <body>
-    <div class="container text-center mt-2">
-      <div class="ratio ratio-16x9" style="margin-top: 50px;">
-        <iframe class="rounded" src="https://www.youtube.com/embed/_9u-39WLxEY?si=9yXGHv7HIUvg553b" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
- 
-    <div class="container mt-2">
-      <div class="text-dark border border-dark bg-light rounded">
+    <!--START OF DESCRIPTION-->
+    <div class="container mt-3 bg-light rounded">
+      <div class="text-dark rounded">
         <p>
           Following some of the team members I had worked with on "Lunar Sword," 
           I met with our lead designers who aimed to capture the surrealism of Silent Hill. I offered some 
@@ -51,11 +45,108 @@
         </p>
       </div>
     </div>
+    <!--END OF DESCRIPTION-->
 
+    <!--BEGIN OF VIDEO-->
+    <div class="container text-center">
+      <div class="ratio ratio-16x9" style="margin-top: 20px;">
+        <iframe class="rounded" src="https://www.youtube.com/embed/_9u-39WLxEY?si=9yXGHv7HIUvg553b" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!--END OF VIDEO-->
+
+  
+
+    
+
+    <!--BEGIN OF ACCORDIAN-->
+    <div class="container mt-2">
+      <div class="accordion accordion-flush" id="accordionFlushExample" style="overflow: visible;">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+               <b>Enemy AI</b>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Our game AI was made to emulate a classic Resident Evil Zombie. It's slow, unintelligent, but aggressive and sometimes unpredictable.
+              Because of how simple the behavior was set to be, a Finite State Machine suited the problem. Plus, we would have finer control over 
+              its more unpredictable aspects.</p>
+
+              <img width="75%" class="rounded" src="../Images/page_somniphobia_process/sominphobia_enemy_editor.png"></img>
+              <p class="text-secondary">General layout of the enemy blueprint.</p>
+              
+              <h2 style="padding-top: 10px;"><b>The Finite State Machine Overview</b></h2>
+              <div>
+                <video autoplay="" loop="" width="75%" class="rounded" style="display: inline-flex;">
+                  <source src="../Images/page_somniphobia_process/somniphobia_FSM.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <p>
+                Each state is transitioned to according to boolean values representing the state of the enemy.
+              <p>
+                A benefit of this design was the innate modularity. If a designer wanted a behavior done, there was a clear path to do it, though 
+                often with added code complexity. 
+              </p>
+
+              <h2><b>Randomness</b></h2>
+
+              <p>
+                One of the ways we wanted to make players feel uneasy was through randomizing attributes of 
+                the enemy so they couldn't get a clear read on what it was doing, or thinking. One of the challenges was understanding
+                what things about the player's behavior would impact its own behavior.
+              </p>
+
+              <p>
+                <img class="rounded" width="75%" src="../Images/page_somniphobia_process/somniphobia_jimmy_lunge.png"></img>
+              </p>
+              <p>
+                <img class="rounded" width="50%" src="../Images/page_somniphobia_process/somniphobia_jimmy_health.png"></img>
+              </p>
+              <p>
+                <img class="rounded" width="80%" src="../Images/page_somniphobia_process/somniphobia_jimmy_stagger.png"></img>
+              </p>
+
+
+              <h2><b>Animations and Collision</b></h2>
+
+              <p>One of the surprisingly neat things to experiment with was collisions on the enemy. 
+                At first the logic was using a simple delay to spawn a collision sphere at a certain point near the chest of the enemy, but this proved
+                to have inconsistent results.
+              </p>
+
+              <p>Then I learned you could send notifications through the animation system which could be used to set state values. Yay, more bloat, but this 
+                allowed for frame-perfect collisions.
+              </p>
+
+              <div>
+                <video autoplay="" loop="" width="75%" class="rounded" style="display: inline-flex;">
+                  <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackanim.mp4" type="video/mp4">
+                </video>
+                <div class="text-secondary">Animation by me in Blender -- baby's first!</div>
+              </div>
+              
+              <div class="container mt-2">
+                <p>
+                  <img class="rounded" width="75%" src="../Images/page_somniphobia_process/somniphobia_jimmy_attackanim01.png"></img>
+                </p>
+
+                <p>
+                  <img class="rounded" width="75%" src="../Images/page_somniphobia_process/somniphobia_jimmy_attackanim03.png"></img>
+                </p>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+    <!--END OF ACCORDIAN-->
+ 
 
     <div class="container text-center" style="font-family: Arial; margin-top: 10px;">
       <div class="row">
-  
         <div class="col">
           <div class="text-white border border-dark bg-info rounded">
             <em><b>Credits:</b></em>
@@ -71,21 +162,6 @@
             <li>-<b>Nathan Fallon</b> - UI/UX Programmer and Designer</li>
             <li>-<b>Liam Binford</b> - Programmer, Level Generation, Fog</li>
           </ul>
-        </div>
-
-        <div class="col-sm">
-          <div class="border border-dark rounded">
-            <b>Personal Contributions:</b>
-          </div>
-          <div class="list_center">
-              <ul class="list_style">
-                  <li>Enemy AI FSM</li>
-                  <li>Pixelation Shader</li>
-                  <li>Player Character Gameplay (partial)</li>
-                  <li>Various Player and Enemy Animations</li> 
-                  <li>Audio Assistance</li> 
-              </ul>
-          </div>
         </div>
       </div>
     </div>

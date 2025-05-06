@@ -19,23 +19,12 @@
     </nav>
   </div>
 
-  <style>
-    .carousel { overflow: hidden; padding-bottom: 4rem; }
-    .carousel-caption { top: 100%; }
-    .carousel-inner { overflow: visible; }
-    .carousel-control-next, .carousel-control-prev, .carousel-indicators { bottom: 4rem; }
-    .ratio-16x9 {
-      --bs-aspect-ratio: calc(9 / 16 * 100%);
-    }
-  </style>
-
   <body>
 
-    <div class="container">
-
+    <div class="container justify-content-center mb-3">
       <div class="container mt-5">
         <div class="ratio ratio-16x9">
-          <iframe src="../Images/page_lunarsword_bloom/ls_toggle_bloom.mp4" style="button.close {display: none !important;}"  alt="Onion Video">
+          <iframe src="../Images/page_lunarsword_bloom/ls_toggle_bloom.mp4" alt="Onion Video">
           </iframe>
         </div>
         <div class="container bg-light rounded rounded mt-3 text-center">
@@ -43,29 +32,25 @@
         </div>
       </div>
 
-      <div class="grid">
-
-        <div class="col mt-5 text-center">
-          <img class="w-75" src="../Images/page_lunarsword_bloom/ls_bloom_0.jpg" alt="ending frame">
-
-          <div class="container bg-light rounded mt-3">
+      <div class="row mt-5 text-center">
+        <div class="col">
+          <img width="75%" src="../Images/page_lunarsword_bloom/ls_bloom_0.jpg" alt="ending frame">
+          <div class="mt-2">
             Without Bloom.
           </div>
         </div>
-
-        <div class="col mt-5 text-center">
-          <img class="w-75" src="../Images/page_lunarsword_bloom/ls_bloom_1.jpg" alt="ending frame">
-
-          <div class="container bg-light rounded mt-3">
-            With Bloom. 
-          </div>
+        <div class="col">
+          <img width="75%" src="../Images/page_lunarsword_bloom/ls_bloom_1.jpg" alt="ending frame">
+          <div class="mt-2">
+            With Bloom.
+          </div> 
         </div>
 
-        <div class="container text-center mt-3 mb-3">
+        <div class="container text-center mt-3">
           <a class="btn btn-primary" href="https://github.com/Kaylubkiss/Project-Samples/tree/main/Academic%20Projects/Graphics/Bloom%20-%20GAM200%2C%20GAM250">Source Code</a>
         </div>
-
       </div>
+    </div>
   </body>
 
 
