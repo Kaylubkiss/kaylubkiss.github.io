@@ -32,66 +32,361 @@
     </div>    
 
     <style>
-        .select_grid
-        {
-            padding: 30px;
-            transition-duration: 0.1s;
-            display: grid;
-            grid-template-columns: auto auto auto;
-            justify-content: center;
-        }
-
         .select_item
         {
+            height: 350px;
             margin-top: 50px;
-            margin-bottom: 50px;
-            transition-duration: 0.4s;
+            position:relative;
+            overflow: hidden;
+            transition-duration: 0.2s;
         }
 
         .select_item:hover
         {
-            filter: drop-shadow(-10px 5px 10px black);
+            filter: drop-shadow(-3px 4px 10px black);
             cursor:pointer;
             transition-duration: 0.3s;
         }
+
+        
+        .work-section-container
+        {
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .work-item-container {
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .work-item-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all .3s ease-in-out;
+        }
+
+        .work-item-bg:hover
+        {
+	        transform: scale(1.07);
+        }
+
+        .work-section-contents {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        .work-item-title-container {
+            width: 100%;
+            background-color: rgba(0,0,0,0.4);
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            line-height: 35px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            pointer-events: none;
+            padding-bottom: 12px;
+            padding-top: 12px;
+        }
+        
+
+        .work-item-title {
+            font-family: 'Quicksand',sans-serif;
+            color: white;
+            font-weight: 100;
+            font-size: 30px;
+        }
+
+        .work-item-desc-container {
+            margin-top: 10px;
+            max-width: 90%;
+            bottom: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .work-item-tags-container {
+            margin-top: 10px;
+            width: 100%;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .work-item-tag {
+            height: 21px;
+            min-width: 30px;
+            padding-left: 7px;
+            padding-right: 7px;
+            color: white;
+            font-family: 'Quicksand',sans-serif;
+            font-weight: 100;
+            font-size: 14px;
+            float: left;
+            background-color: #813772;
+            margin-right: 5px;
+            margin-top: 5px;
+            text-align: center;
+            border-radius: 4px;
+        }
     </style>
 
-    <body>
-        <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <div class="select_item">
-                            <img src="Images/page_videogames/icon_github.jpg" width="350px" class="rounded" alt="softrender_icon" onclick="window.location.href='https://github.com/Kaylubkiss/DigiPen'">
+  <body>
+    <div class="work-section-contents">
+        <div class="row">
+            <!--GITHUB-->
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="work-item-container">
+                    <a href="https://github.com/Kaylubkiss/Project-Samples">
+                    <div class="select_item">
+                        <div class="work-item-bg" style="background-image: url(Images/page_videogames/icon_github.jpg)" alt="github_icon"></div>
+                        <div class="work-item-title-container">
+                            <div class="work-item-title">
+                            <span>My Github.</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="select_item">
-                            <img src="Images/page_videogames/icon_onion.jpg" width="350px" class="rounded" alt="onion_icon" onclick="document.location='videogames/onion.html'">
+                    </a>
+                    <div class="work-item-tags-container">
+                        <div class="work-item-tag" style="background-color: blue;">
+                            <span>C++</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #7812a7">
+                            <span>GLSL</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: rgb(18, 184, 129);">
+                            <span>Assembly</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #f5cb42;">
+                            <span>CMake</span>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="select_item">
-                            <img src="Images/page_videogames/icon_somniphobia.jpg" width="350px" class="rounded" alt="som_icon" onclick="document.location='videogames/somniphobia.html'">
-                        </div>
+                    <div class="work-item-desc-container">
+                        <span>
+                            Source code to various academic projects and personal projects.
+                        </span>
                     </div>
-                    <div class="col">
-                        <div class="select_item">
-                            <img src="Images/page_videogames/icon_lunarsword.jpg" width="350px" class="rounded" alt="softrender_icon" onclick="document.location='videogames/lunarsword.html'">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="select_item">
-                            <img src="Images/page_videogames/icon_projectpeep.jpg" width="350px" class="rounded" alt="softrender_icon" onclick="document.location='videogames/pp.html'">
-                        </div>
-                    </div>
-                    
-                    <div class="col">
-                        <div class="select_item">
-                            <img src="Images/page_videogames/software_render.gif" width="350px" class="rounded" alt="softrend_icon" onclick="document.location='videogames/softrend.html'">
-                        </div>
+                    <div style="text-align: left; margin-top: 5px;">
+                        <b>Contributions:</b>
+                        <ul>
+                            <li>Graphics Programming</li>
+                            <li>Gameplay Programming</li>
+                            <li>Engine Programming</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+            <!--END OF GITHUB-->
+            <!--BEGIN OF ONION-->
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="work-item-container">
+                    <a href="videogames/onion.html">
+                    <div class="select_item">
+                        <div class="work-item-bg" style="background-image: url(Images/page_videogames/icon_onion.jpg)" alt="onion_icon"></div>
+                        <div class="work-item-title-container">
+                            <div class="work-item-title">
+                            <span>Nowhere to Grow</span>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="work-item-tags-container">
+                        <div class="work-item-tag" style="background-color: blue;">
+                            <span>C++</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #2abdb6">
+                            <span>Narrative Design</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #d60032">
+                            <span>Animation</span>
+                        </div>
+                    </div>
+                    <div class="work-item-desc-container">
+                        <span>
+                            A 2D Puzzle and Story-Based Platformer.
+                        </span>
+                    </div>
+                    <div style="text-align: left; margin-top: 5px;">
+                        <b>Contributions:</b>
+                        <ul>
+                            <li>Player and Interactables Programming</li>
+                            <li>Story Development and Writing</li>
+                            <li>Character and Cutscene Animation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--END OF ONION-->
+            <!--BEGIN OF SOMNIPHOBIA-->
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="work-item-container">
+                    <a href="videogames/somniphobia.html">
+                    <div class="select_item">
+                        <div class="work-item-bg" style="background-image: url(Images/page_videogames/icon_somniphobia.jpg)" alt="somniphobia_icon"></div>
+                        <div class="work-item-title-container">
+                            <div class="work-item-title">
+                            <span>Somniphobia</span>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="work-item-tags-container">
+                        <div class="work-item-tag" style="background-color: rgb(71, 120, 255);">
+                            <span>UE5</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #6d00b0">
+                            <span>Graphics</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #f38e00">
+                            <span>Game AI</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #d60032">
+                            <span>Animation</span>
+                        </div>
+                    </div>
+                    <div class="work-item-desc-container">
+                        <span>
+                            A Rogue-Like Survival Horror game where the player must escape a recurring nightmare, 
+                            inspired by classic Resident Evil and Silent Hill.  
+                        </span>
+                    </div>
+                    <div style="text-align: left; margin-top: 5px;">
+                        <b>Contributions:</b>
+                        <ul>
+                            <li>Enemy AI Programming</li>
+                            <li>Screenspace pixelation shader</li>
+                            <li>Enemy pixelation material</li>
+                            <li>Custom player and enemy animations</li>
+                            <li>Level lighting assistance</li>
+                            <li>Audio design assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--END OF SOMNIPHOBIA-->
+            <!--BEGIN OF LUNARSWORD-->
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="work-item-container">
+                    <a href="videogames/lunarsword.html">
+                    <div class="select_item">
+                        <div class="work-item-bg" style="background-image: url(Images/page_videogames/icon_lunarsword.jpg)" alt="lunarsword_icon"></div>
+                        <div class="work-item-title-container">
+                            <div class="work-item-title">
+                            <span>Lunarsword</span>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="work-item-tags-container">
+                        <div class="work-item-tag" style="background-color: blue;">
+                            <span>C++</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #6d00b0">
+                            <span>Graphics</span>
+                        </div>
+                    </div>
+                    <div class="work-item-desc-container">
+                        <span>
+                            A Rogue-Like TRPG game where the player must fight their way up to the moon.    
+                        </span>
+                    </div>
+                    <div style="text-align: left; margin-top: 5px;">
+                        <b>Contributions:</b>
+                        <ul>
+                            <li>Bloom post-processing shaders</li>
+                            <li>UI Buttons</li>
+                            <li>Serialization code assistance</li>
+                            <li>Core engine code assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--END OF LUNARSWORD-->
+            <!--BEGIN OF PROJECT PEEPLE-->
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="work-item-container">
+                    <a href="videogames/pp.html">
+                    <div class="select_item">
+                        <div class="work-item-bg" style="background-image: url(Images/page_videogames/icon_projectpeep.jpg)" alt="pp_icon"></div>
+                        <div class="work-item-title-container">
+                            <div class="work-item-title">
+                            <span>Project Peeple</span>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="work-item-tags-container">
+                        <div class="work-item-tag" style="background-color: rgb(174, 0, 255);">
+                            <span>C</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #00a916">
+                            <span>Game Design</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #00998c">
+                            <span>Audio Design</span>
+                        </div>
+                    </div>
+                    <div class="work-item-desc-container">
+                        <span>
+                            A minimalistic collection-based game where 
+                            the player must defend against enemies and suck up "peeple".    
+                        </span>
+                    </div>
+                    <div style="text-align: left; margin-top: 5px;">
+                        <b>Contributions:</b>
+                        <ul>
+                            <li>Level designer (events, enemy placement)</li>
+                            <li>Music composition</li>
+                            <li>Weapon code</li>
+                            <li>Collection code assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--END OF PROJECT PEEPLE-->
+            <!--BEGIN OF SOFTWARE RENDER-->
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="work-item-container">
+                    <a href="videogames/softrend.html">
+                    <div class="select_item">
+                        <div class="work-item-bg" style="background-image: url(Images/page_videogames/software_render.gif)" alt="softrend_icon"></div>
+                        <div class="work-item-title-container">
+                            <div class="work-item-title">
+                            <span>Sofware Rendering Assignment Walkthrough</span>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="work-item-tags-container">
+                        <div class="work-item-tag" style="background-color: rgb(174, 0, 255);">
+                            <span>C++</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #6d00b0">
+                            <span>Graphics</span>
+                        </div>
+                    </div>
+                    <div class="work-item-desc-container">
+                        <span>
+                            A little assignment I did for an intro-level graphics class. The code simply does what 
+                            the pipeline does between vertex and fragment stages, but all on the cpu.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--END OF SOFTWARE RENDER-->
         </div>
-    </body>
-
+    </div>
+  </body>
 </html>
