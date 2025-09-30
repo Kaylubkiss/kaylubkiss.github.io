@@ -62,14 +62,14 @@
 
     <!--BEGIN OF ACCORDIAN-->
     <div class="container mt-2">
-      <div class="accordion accordion-flush" id="accordionFlushExample" style="overflow: visible;">
+      <div class="accordion" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-               <b>Enemy AI</b>
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+               <h3 style="font-family: Arial, Helvetica, sans-serif;">Enemy AI</h3>
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <p>Our game AI was made to emulate a classic Resident Evil Zombie. It's slow, unintelligent, but aggressive and sometimes unpredictable.
               Because of how simple the behavior was set to be, a Finite State Machine suited the problem. Plus, we would have finer control over 
