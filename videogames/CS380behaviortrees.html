@@ -1,5 +1,82 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script type="module" src="../bootstrap/js/bootstrap.min.js"></script>
+  </head>
 
+  <body style="font-family: Arial;" class="mb-5">
+    <div class="container text-center mt-5">
+    <h1><b>Behavior Tree Assignment Walkthrough</b></h1>
+    </div>
+
+    <div class="container mt-3">
+      <p>
+        In the fall of my Senior year, I took a Game AI class and learned various approaches to implementing behavior inside a real-time context. Looking back, my work on <a href="somniphobia.html"> Somniphobia</a>
+        would have benefitted a lot from the knowledge I attained from this class, but, you live and learn, right?
+      </p>
+
+      <p>
+        Our first coding assignment tasked us to implement 4 behavior trees and put them in a level. After submission, the top 10 assignments were nominated for an extra 5%. My project
+        was among those top 10, though I didn't win the majority vote.
+      </p>
+
+      <h3><b>The Setup</b></h3>
+
+      <p class="bg-light">
+        <em>Tools Used</em> - C++, Visual Studio 19+, BehaviorTreeEditor.exe, DirectX collision library
+      </p>
+
+      <p>
+        The provided environment was mostly complete, but we were free to edit it however we liked. The goal of the project was to be able to understand and use behavior trees.
+      </p>
+
+      <p>
+        We also had a visual editor to create the behavior tree logic, which required relatively minimal setup:
+        <ol>
+          <li>Define the behavior tree node in C++</li>
+          <li>Register the node in a specified ".def" file so the behavior tree editor can use it</li>
+          <li>Setup the logic in the editor, save the behavior tree from the editor</li>
+          <li>Define the saved behavior tree in a specified ".def" file so that the C++ can use it</li>
+        </ol>
+      </p>
+
+      <div class="text-center">
+        <img width="75%" src="../Images/cs380_behaviortree/behaviortree_editor.png"></img>   
+        <p class="text-secondary">The behavior tree editor</p>
+      </div>
+
+
+      <p>
+        We had 3 types of behavior tree nodes to create and use:
+        <ul>
+          <li><b>Decorator</b> - additional logic that modifies the behavior of its child node (how many ticks, inverting the outcome, etc.)</li>
+          <li><b>Control Flow</b> - manages the order and conditions under which children nodes are executed.</li>
+          <li><b>Leaf</b> - the execution units of the logic (kill enemy, change its color, move, etc).</li>
+        </ul>
+      </p>
+
+      <p>
+        For this assignment I created and used a total of 10 new nodes in combination with other control flow and decorators. 4 different behavior
+        trees were created and used in total.
+      </p>
+
+      <h3><b>Implementation</b></h3>
+
+      <p>
+        First of all what's the scene? What are the personalities in it?
+      </p>
+
+      <p>
+        
+      </p>
+      
+
+    
+    </div>
+
+  </body>
 
 </html>
