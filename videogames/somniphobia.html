@@ -65,7 +65,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-               <h3 style="font-family: Arial, Helvetica, sans-serif;"><b>Enemy AI</b></h3>
+               <h3 style="font-family: Arial;"><b>Enemy AI</b></h3>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -73,13 +73,14 @@
               <p>Our game AI was made to emulate a classic <em>Resident Evil&trade;</em> Zombie. It's slow, unintelligent, but aggressive and sometimes unpredictable.
               Because of how simple the behavior was set to be, a Finite State Machine suited the problem. Plus, we would have finer control over 
               its more unpredictable aspects.</p>
-
-              <img width="75%" class="rounded" src="../Images/page_somniphobia_process/sominphobia_enemy_editor.png"></img>
+              
+              <img width="100%" class="rounded" src="../Images/page_somniphobia_process/sominphobia_enemy_editor.png"></img>
               <p class="text-secondary">General layout of the enemy blueprint.</p>
               
               <h2 style="padding-top: 10px;"><b>The Finite State Machine Overview</b></h2>
-              <div>
-                <video autoplay="" loop="" width="75%" class="rounded" style="display: inline-flex;">
+              
+              <div class="ratio ratio-16x9 mb-3">
+                <video autoplay="" loop="" class="rounded" >
                   <source src="../Images/page_somniphobia_process/somniphobia_FSM.mp4" type="video/mp4">
                 </video>
               </div>
@@ -141,11 +142,11 @@
                 </p>
 
 
-                <p>
-                  <video autoplay="" loop="" width="75%" class="rounded" style="display: inline-flex;">
+                <div class="ratio ratio-16x9 mb-3">
+                  <video autoplay="" loop="" class="rounded" style="display: inline-flex;">
                   <source src="../Images/page_somniphobia_process/somniphobia_enemy_lunge.mp4" type="video/mp4">
                   </video>
-                </p>
+                </div>
                 <!--END OF RANDOMNESS SUBSECTION, LUNGING-->
 
               
@@ -163,9 +164,9 @@
                   some would die a little slower. We wanted to cause panic when players noticed one was taking more hits, forcing them to adapt their style in order to reserve ammo and time.
                 </p>
 
-                <p>
-                  <img class="rounded" width="50%" src="../Images/page_somniphobia_process/somniphobia_jimmy_health.png"></img>
-                </p>
+                <div class="mb-3">
+                  <img class="rounded" width="100%" src="../Images/page_somniphobia_process/somniphobia_jimmy_health.png"></img>
+                </div>
                 <!--END OF RANDOMNESS SUBSECTION, HEALTH-->
                 
                 <!--BEGIN OF RANDOMNESS SUBSECTION, STAGGERING-->
@@ -182,11 +183,11 @@
                 </p>
 
                 
-                <p>
-                  <video autoplay="" loop="" width="75%" class="rounded" style="display: inline-flex;">
+                <div class="ratio ratio-16x9 mb-3">
+                  <video autoplay="" loop="" class="rounded">
                   <source src="../Images/page_somniphobia_process/somniphobia_enemy_stagger.mp4" type="video/mp4">
                   </video>
-                </p>
+                </div>
                 <!--END OF RANDOMNESS SUBSECTION, STAGGERING-->
 
               <!--END OF RANDOMNESS SECTION-->
@@ -206,19 +207,22 @@
               <p>
                 Then the eureka hit: I could send notifications through the animation system to set state values. This offered near frame-perfect collision queries.
               </p>
-
+              
               <div class="mb-3">
-                <video autoplay="" loop="" width="75%" class="rounded" style="display: inline-flex;">
-                  <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackanim.mp4" type="video/mp4">
-                </video>
+                <div class="ratio ratio-16x9">
+                  <video autoplay="" loop="" class="rounded" >
+                    <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackanim.mp4" type="video/mp4">
+                  </video>
+                </div>
                 <div class="text-secondary">animation made by me in Blender -- baby's first!</div>
               </div>
               
-              <p>
-                <video autoplay="" loop="" width="75%" class="rounded" style="display: inline-flex;">
+              
+              <div class="ratio ratio-16x9 mb-3">
+                <video autoplay="" loop="" class="rounded">
                 <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackandcollisions.mp4" type="video/mp4">
                 </video>
-              </p>
+              </div>
               <!--END OF ANIMATIONS AND COLLISION SECTION-->
 
 
