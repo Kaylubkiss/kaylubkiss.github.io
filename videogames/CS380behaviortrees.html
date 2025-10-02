@@ -190,20 +190,22 @@
         </video>
       </div>
 
-      <p>
-        I took the intiative to extend the project environment's capabilities by adding collisions. 
-        While that sounds fancy on paper, it really was just a matter of digging through the DirectX namespace (our renderer), 
-        finding there was a library with <em>Oriented Bounding Box</em> (OBB) intersection tests, and then interfacing that with the existing code-base. This way, the demo felt more reactive. 
-      </p>
+      <div class="bg-light">
+        <p>
+          I took the intiative to extend the project environment's capabilities by adding collisions. 
+          While that sounds fancy on paper, it really was just a matter of digging through the DirectX namespace (our renderer), 
+          finding there was a library with <em>Oriented Bounding Box</em> (OBB) intersection tests, and then interfacing that with the existing code-base. This way, the demo felt more reactive. 
+        </p>
 
-      <p>
-        The key addition I made was a method within the agent class called <code>getOBB()</code>
-      </p>
+        <p>
+          The key addition I made was a method within the agent class called <code>getOBB()</code>
+        </p>
 
-      <p>
-        This constructs an OBB based on the agent's scale, orientation, and position. Then one can use a method from <code>DirectX::BoundingOrientedBox</code>
-        called <code>Intersect(...)</code>, which takes in another OBB of the same type to test against.
-      </p>
+        <p>
+          This constructs an OBB based on the agent's scale, orientation, and position. Then one can use a method from <code>DirectX::BoundingOrientedBox</code>
+          called <code>Intersect(...)</code>, which takes in another OBB of the same type to test against.
+        </p>
+      </div>
       <!--END OF IMPLEMENTATION SECTION-->
       
       <h3 class="mt-5"><b>Putting It All Together</b></h3>
