@@ -8,8 +8,21 @@
   </head>
 
   <body style="font-family: Arial;" class="mb-5">
-    <div class="container text-center mt-5">
-    <h1><b>Behavior Tree Assignment Walkthrough</b></h1>
+
+   
+
+    <div class="container">
+      <div class="mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb rounded">
+          <li class="breadcrumb-item"><a href="../homepage.html">Caleb's Collection</a></li>
+          <li class="breadcrumb-item active" aria_current="page">Behavior Tree Assignment Walkthrough</li>
+        </ol>
+      </nav>
+
+      <div class="mt-3">
+        <h1><b>Behavior Tree Assignment Walkthrough</b></h1>
+      </div>
     </div>
 
     <div class="container mt-3">
@@ -19,8 +32,9 @@
       </p>
 
       <p>
-        Our first coding assignment tasked us to implement 4 behavior trees and put them in a level. After submission, the top 10 assignments were nominated for an extra 5%. My project
-        was among those top 10, though I didn't win the majority vote.
+        Our first coding assignment tasked us to implement 4 behavior trees, at least 4 layers deep, and put them in a level. 
+        After submission, the top 10 assignments were nominated for an extra 5% on their grade. 
+        My project was among those top 10, though I didn't get the extra 5%.
       </p>
 
       <h3><b>The Setup</b></h3>
@@ -52,9 +66,9 @@
       <p>
         We had 3 types of behavior tree nodes to create and use:
         <ul>
-          <li><b>Decorator</b> - additional logic that modifies the behavior of its child node (how many ticks, inverting the outcome, etc.)</li>
+          <li><b>Decorator</b> - additional logic that can be used to modify the behavior of its child node (how many ticks, inverting the outcome, etc.).</li>
           <li><b>Control Flow</b> - manages the order and conditions under which children nodes are executed.</li>
-          <li><b>Leaf</b> - the execution units of the logic (kill enemy, change its color, move, etc).</li>
+          <li><b>Leaf</b> - the execution units of the behavior tree (kill enemy, change its color, move, etc).</li>
         </ul>
       </p>
 
@@ -63,18 +77,143 @@
         trees were created and used in total.
       </p>
 
-      <h3><b>Implementation</b></h3>
+
+      <!--BEGINNING OF IMPLEMENTATION SECTION-->
+      <h3><b>The Implementation</b></h3>
 
       <p>
-        First of all what's the scene? What are the personalities in it?
+        First of all what's the scene? What are the personalities in it? This is as much a creative problem as it is technical. The scene should be interesting!
       </p>
 
       <p>
-        
+        Well, of course, it should all be Mario, father of gaming. Unfortunately I couldn't afford animations, but I got the models.
       </p>
+
+      <h5><em>Behavior Tree #1: "RotateToTarget"</em></h5>
+      <!--INSERT VIDEO HERE-->
+      <div class="ratio ratio-16x9 mb-3">
+        <video controls loop="" class="rounded" muted="true">
+          <source src="../Images/cs380_behaviortree/bt_mariotargeting.mp4" type="video/mp4" alt="mario rotating toward logo">
+        </video>
+      </div>
+
+      <div class="bg-light">
+        <p>
+          An agent of chaos. Murder everything in sight. It doesn't matter who.
+        </p>
+
+        <p>
+          In a parallel sequencer:
+          <ol>
+            <li>Find a random target, battle cry, rotate toward the target, kill, then stay still. Repeat.</li>
+            <li>Randomly change color to blue, then back, then blue, then..</li>
+          </ol>
+        </p>
+      </div>
+
+      <h5><em>Behavior Tree #2: "Fleeman"</em></h5>
+      <!--INSERT VIDEO HERE-->
+      <div class="ratio ratio-16x9 mb-3">
+        <video controls loop="" class="rounded" muted="true">
+          <source src="../Images/cs380_behaviortree/bt_fleeman.mp4" type="video/mp4" alt="fleeman demo">
+        </video>
+      </div>
+
+      <div class="bg-light">
+        <p>
+          Try to avoid the death staring into their eyes. Panicked.
+        </p>
+
+        <p>
+          In a parallel sequencer:
+          <ol>
+            <li>If I'm not dead, find the death that's chasing me, then find every way to avoid it.</li>
+            <li>If I've collided with the deathly hallow, then I must scream, change my color to red, and die.</li>
+          </ol>
+        </p>
+
+        <p>
+          The behavior for <em>avoiding</em> was some heuristics I came up with on a whim:
+          <ol>
+            <li>Form a ray from the agent's position to the four corners of the square grid. If the ray hits the evasion target (Mario in this case), 
+              or is in the general direction toward it, find the next corner.</li>
+            <li>If no corner was found, find an agent to move toward that won't kill the Fleeman. Or stand around and die.</li>
+          </ol>
+        </p>
+
+        <p>
+          Another thing to figure out was telling the enemy about the grid itself. When the enemy is initialized, the grid is "uploaded" by putting the corner positions 
+          into the tree's blackboard so they can be retrieved during evasion. This creates an 
+        </p>
+      </div>
+
+
+      <h5><em>Behavior Tree #3: "CarelessMan"</em></h5>
+      <!--INSERT VIDEO HERE-->
+      <div class="ratio ratio-16x9 mb-3">
+        <video controls loop="" class="rounded" muted="true">
+          <source src="../Images/cs380_behaviortree/bt_carelessman.mp4" type="video/mp4" alt="carelessman demo">
+        </video>
+      </div>
       
+      <div class="bg-light">
+        <p>
+          Death doesn't scare them. They embrace it.
+        </p>
 
-    
+        <p>
+          The behavior is very similar to "Fleeman," but there's a chance the agent will intentionally sprint toward the danger.
+        </p>
+      </div>
+
+
+      <h5><em>Behavior Tree #4: "Thwomp"</em></h5>
+      <!--INSERT VIDEO HERE-->
+      <div class="ratio ratio-16x9 mb-3">
+        <video controls loop="" class="rounded" muted="true">
+          <source src="../Images/cs380_behaviortree/bt_thwomp.mp4" type="video/mp4" alt="thwomp behavior demo">
+        </video>
+      </div>
+
+      <div class="bg-light">
+        <p>
+          It's the Mario Thwomp. Something's underneath me? "Ergh!" Then rise.
+        </p>
+      </div>
+
+      <h5><em>Adding Collisions</em></h5>
+
+      <!--INSERT VIDEO HERE-->
+      <div class="ratio ratio-16x9 mb-3">
+        <video controls loop="" class="rounded" muted="true">
+          <source src="../Images/cs380_behaviortree/bt_collisions.mp4" type="video/mp4" alt="enemies in arena with collisions">
+        </video>
+      </div>
+
+      <p>
+        I took the intiative to extend the project environment's capabilities by adding collisions. 
+        While that sounds fancy on paper, it really was just a matter of digging through the DirectX namespace (our renderer), 
+        finding there was a library with <em>Oriented Bounding Box</em> (OBB) intersection tests, and then interfacing that with the existing code-base. This way, the demo felt more reactive. 
+      </p>
+
+      <p>
+        The key addition I made was a method within the agent class called <code>getOBB()</code>
+      </p>
+
+      <p>
+        This constructs an OBB based on the agent's scale, orientation, and position. Then one can use a method from <code>DirectX::BoundingOrientedBox</code>
+        called <code>Intersect(...)</code>, which takes in another OBB of the same type to test against.
+      </p>
+      <!--END OF IMPLEMENTATION SECTION-->
+      
+      <h3 class="mt-5"><b>Putting It All Together</b></h3>
+
+      <!--INSERT VIDEO HERE-->
+      <div class="ratio ratio-16x9 mb-3">
+        <video controls loop="" class="rounded" muted="true">
+          <source src="../Images/cs380_behaviortree/bt_altogether.mp4" type="video/mp4" alt="all the elements together in the level with music">
+        </video>
+      </div>
     </div>
 
   </body>
