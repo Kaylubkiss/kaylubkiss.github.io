@@ -11,24 +11,36 @@
         "bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/homepage.css">
         <script type="module" src="Javascript/navigation.js"></script>
+        <link rel="stylesheet" href="font-awesome/css/all.min.css">
         <homenav-header></homenav-header>
     </head>
 
     
-
-    <div class="container" style="font-family: Arial;">
-            <div class="display-4 text-center text-dark">
-                Caleb's Collection of Little Works         
-            </div>    
-            
-            <div class="text-center mb-2">
-                <a href="https://drive.google.com/file/d/180c2G_MMy7T5h4pzcpgfg0DBimcScVxi/view?usp=drive_link" class="btn btn-sm btn-primary">Resume</a>
-            </div>
-
-            <div class="text-center">
-                <a class="btn btn-light btn-sm text-secondary" href='calebswebpage_secondpage.html'>click me for a surprise</a> 
-            </div> 
-            
+    <div class="container mb-2" style="font-family: Arial;">
+            <div class="d-flex justify-content-center">
+                <div class="d-inline-flex flex-column align-items-start">      
+                    <div class="display-4 text-dark mb-2">
+                        Caleb's Collection of Little Works
+                    </div>
+                    <div>
+                        <a href="https://github.com/Kaylubkiss" 
+                        class="btn btn-outline-secondary">
+                            <i class="fab fa-github"></i>
+                            Github  
+                        </a>
+                        <a href="https://www.linkedin.com/in/caleb-kissinger/"
+                        class="btn btn-outline-primary">
+                            <i class="fab fa-linkedin"></i>
+                            Linkedin
+                        </a>
+                        <a href="https://drive.google.com/file/d/180c2G_MMy7T5h4pzcpgfg0DBimcScVxi/view?usp=drive_link" 
+                        class="btn btn-outline-info">
+                            <i class="fa fa-file-pdf"></i>
+                            Resume
+                        </a>    
+                    </div>
+                </div>
+            </div>     
     </div>
 
     <style>
@@ -39,6 +51,7 @@
             position:relative;
             overflow: hidden;
             transition-duration: 0.2s;
+            border-radius: 10px;
         }
 
         .select_item:hover
@@ -58,10 +71,11 @@
 
         .work-item-container {
             max-width: 350px;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
             text-align: center;
         }
 
@@ -144,20 +158,20 @@
     </style>
 
   <body>
-    <div class="work-section-contents">
+    <div class="container">
         <div class="row">
             <!--GITHUB-->
             <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="work-item-container">
-                    <a href="https://github.com/Kaylubkiss">
-                    <div class="select_item">
-                        <div class="work-item-bg" style="background-image: url(Images/page_videogames/icon_github.jpg)" alt="github_icon"></div>
-                        <div class="work-item-title-container">
-                            <div class="work-item-title">
-                            <span>My Github.</span>
+                    <a href="https://github.com/Kaylubkiss/CWKVulkanEngine">
+                        <div class="select_item">
+                            <div class="work-item-bg" style="background-image: url(Images/page_videogames/icon_vulkan_engine.gif)" alt="vulkan_engine_icon"></div>
+                            <div class="work-item-title-container">
+                                <div class="work-item-title">
+                                <span>My Vulkan Engine</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                     <div class="work-item-tags-container">
                         <div class="work-item-tag" style="background-color: blue;">
@@ -168,9 +182,6 @@
                         </div>
                         <div class="work-item-tag" style="background-color: #d60032">
                             <span>Vulkan</span>
-                        </div>
-                        <div class="work-item-tag" style="background-color: rgb(18, 184, 129);">
-                            <span>Assembly</span>
                         </div>
                         <div class="work-item-tag" style="background-color: #f5cb42;">
                             <span>CMake</span>
