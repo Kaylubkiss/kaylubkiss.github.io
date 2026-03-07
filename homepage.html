@@ -7,20 +7,16 @@
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href=
-        "bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="stylesheets/homepage.css">
-        <script type="module" src="Javascript/navigation.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="font-awesome/css/all.min.css">
-        <homenav-header></homenav-header>
     </head>
 
     
-    <div class="container mb-2" style="font-family: Arial;">
+    <div class="container mb-2 mt-5" style="font-family: Arial;">
             <div class="d-flex justify-content-center">
                 <div class="d-inline-flex flex-column align-items-start">      
                     <div class="display-4 text-dark mb-2">
-                        Caleb's Collection of Little Works
+                        <a style="text-decoration: none;" href="about.html">Caleb</a>'s Collection of Little Works
                     </div>
                     <div>
                         <a href="https://github.com/Kaylubkiss" 
@@ -177,11 +173,11 @@
                         <div class="work-item-tag" style="background-color: blue;">
                             <span>C++</span>
                         </div>
-                        <div class="work-item-tag" style="background-color: #7812a7">
-                            <span>GLSL</span>
-                        </div>
                         <div class="work-item-tag" style="background-color: #d60032">
                             <span>Vulkan</span>
+                        </div>
+                        <div class="work-item-tag" style="background-color: #7812a7">
+                            <span>GLSL</span>
                         </div>
                         <div class="work-item-tag" style="background-color: #f5cb42;">
                             <span>CMake</span>
@@ -189,15 +185,18 @@
                     </div>
                     <div class="work-item-desc-container">
                         <span>
-                            Source code to various academic projects and personal projects.
+                            The repo to my whole codebase. <em>Check "dev" for the latest additions.</em>
                         </span>
                     </div>
                     <div style="text-align: left; margin-top: 5px;">
                         <b>Contributions:</b>
                         <ul>
-                            <li><a href="https://github.com/Kaylubkiss/CWKVulkanEngine">Graphics Programming</a></li>
-                            <li>Gameplay Programming</li>
-                            <li>Engine Programming</li>
+                            <li>Physically-Based Rendering with Deferred Shading</li>
+                            <li>Geometry shader that efficiently projects multiple depth maps into image layers for sampling</li>
+                            <li>Non-blocking I/O that loads <em>.obj</em> and <em>.gltf</em> geometry and texture data.</li>
+                            <li>Cross-platform build automation with CMake for Windows and Linux systems</li>
+                            <li>Hot-reloading with <em>fstat()</em> and <em>shaderc</em> integration</li>
+                            <li>Rigidbody physics with <em>ReactPhysics3D</em> integration</li>
                         </ul>
                     </div>
                 </div>
