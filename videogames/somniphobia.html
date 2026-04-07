@@ -3,254 +3,158 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href=
-        "../bootstrap/css/bootstrap.min.css"> 
-    <script type="module" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"> 
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../stylesheets/parastyles.css">
-    <script type="module" src="Javascript/navigation.js"></script>
     <link rel="stylesheet" href="../font-awesome/css/all.min.css">
   </head>
 
-  <div class="container mt-3">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb rounded">
-        <li class="breadcrumb-item"><a href="../homepage.html">Caleb's Collection</a></li>
-        <li class="breadcrumb-item active" aria_current="page">Somniphobia</li>
-      </ol>
-    </nav>
-
-    <div class="container">
-      <h1><b>Somniphobia</b>
-        <a href="https://store.steampowered.com/app/3606150/Somniphobia/">
-          <button class="btn btn-primary pl-2 pr-2" ><i class="fab fa-steam"></i> Play on Steam</button>
-        </a>
-      </h1>
-       
-    </div>
-  </div>
-
-  
   <body>
-    <!--START OF DESCRIPTION-->
-    <div class="container mt-3 bg-light rounded">
-      <div class="text-dark rounded">
-        <p>
-          Following some of the team members I had worked with on "Lunar Sword," 
-          I met with our lead designers who aimed to capture the surrealism of Silent Hill. I offered some 
-          story beats in the spirit of Psychological Horror, even involving a lover that
-          was fading away from the life of the character. We ended up reinforcing very
-          little of the story we came up with. Though we didn't have artists, 
-          I lended a hand in creating some assets that otherwise would have been  bought.
-          I also got my first taste of AI programming, which I would later study in a class the following year.
-        </p>
-      </div>
+    <div class="container mt-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb rounded">
+          <li class="breadcrumb-item"><a href="../index.html">Caleb's Collection</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Somniphobia</li>
+        </ol>
+      </nav>
     </div>
-    <!--END OF DESCRIPTION-->
 
-    <!--BEGIN OF VIDEO-->
     <div class="container text-center">
+      <h1 class="text-start"><b>Somniphobia</b></h1>
       <div class="ratio ratio-16x9" style="margin-top: 20px;">
         <iframe class="rounded" src="https://www.youtube.com/embed/_9u-39WLxEY?si=9yXGHv7HIUvg553b" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
+
+      <div class="text-center mt-3">
+        <a href="https://store.steampowered.com/app/3606150/Somniphobia/">
+          <button class="btn btn-primary pl-2 pr-2">
+            <i class="fab fa-steam"></i> Play on Steam
+          </button>
+        </a>
+      </div>
     </div>
-    <!--END OF VIDEO-->
 
-  
-
-  
-    <!--BEGIN OF ACCORDION-->
-    <div class="container mt-2">
-      <div class="accordion" id="accordionFlushExample">
+    <div class="container mt-3">
+      <div class="accordion" id="somniphobiaAccordion">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="headingEnemyAI">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnemyAI" aria-expanded="true" aria-controls="collapseEnemyAI">
                <h3 style="font-family: Arial;"><b>Enemy AI</b></h3>
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="collapseEnemyAI" class="accordion-collapse collapse show" aria-labelledby="headingEnemyAI" data-bs-parent="#somniphobiaAccordion">
             <div class="accordion-body">
-              <p>Our game AI was made to emulate a classic <em>Resident Evil&trade;</em> Zombie. It's slow, unintelligent, but aggressive and sometimes unpredictable.
-              Because of how simple the behavior was set to be, a Finite State Machine suited the problem. Plus, we would have finer control over 
-              its more unpredictable aspects.</p>
+              <p>Our game AI was made to emulate a classic <em>Resident Evil&trade;</em> Zombie. It's slow, unintelligent, but aggressive and sometimes unpredictable. Because of how simple the behavior was set to be, a Finite State Machine suited the problem. Plus, we would have finer control over its more unpredictable aspects.</p>
               
-              <img width="100%" class="rounded" src="../Images/page_somniphobia_process/sominphobia_enemy_editor.png"></img>
+              <img width="100%" class="rounded" src="../Images/page_somniphobia_process/sominphobia_enemy_editor.png" alt="enemy editor">
               <p class="text-secondary">General layout of the enemy blueprint.</p>
               
-              <h2 style="padding-top: 10px;"><b>The Finite State Machine Overview</b></h2>
-              
+              <h2 class="mt-4"><b>The Finite State Machine Overview</b></h2>
+                            
               <div class="ratio ratio-16x9 mb-3">
-                <video autoplay="" loop="" class="rounded" muted="true" controlslist="nofullscreen">
-                  <source src="../Images/page_somniphobia_process/somniphobia_FSM.mp4" type="video/mp4" alt="FSM video loop">
+                <video autoplay loop class="rounded" muted controlslist="nofullscreen">
+                  <source src="../Images/page_somniphobia_process/somniphobia_FSM.mp4" type="video/mp4">
                 </video>
               </div>
 
-              <p>
-                Each state is transitioned to based on different boolean values. Custom-made animations were created to play
-                when entering these states as well (ah, except for death, the animation that plays there was taken from the asset store).
-              </p>
+              <p>Each state is transitioned to based on different boolean values. Custom-made animations were created to play when entering these states as well.</p>
 
-              <p>
-                Those states are:
-                <ul>
-                  <li><b>Idle</b> - the enemy is visibly standing still. Could be pursuing the player.</li>
-                  <li><b>Attack</b> - the enemy is swinging at the player because it's close enough to them. <br>Possibly gives damage to the player.</li>
-                  <li><b>Hit</b> - the enemy was shot or hit by the player's pipe. Possibly takes damage.</li>
-                  <li><b>LungeAttack</b> - the enemy lunges at the player because it's close enough to them. This may not be activated based on probabilistic factors.</li>
-                  <li><b>LockOnPlayer</b> - if the enemy has a successful lunge, it reaches a very close point to the player, then it will grab onto them.</li>
-                  <li><b>death</b> - the enemies HP is below or at zero. All other states are interrupted to reach this one. Enemy ragdolls and is no longer able to reach any other state.</li>
-                </ul>
-              </p>
+              <ul>
+                <li><b>Idle</b> - the enemy is visibly standing still. Could be pursuing the player.</li>
+                <li><b>Attack</b> - the enemy is swinging at the player because it's close enough to them.</li>
+                <li><b>Hit</b> - the enemy was shot or hit by the player's pipe.</li>
+                <li><b>LungeAttack</b> - the enemy lunges at the player based on probabilistic factors.</li>
+                <li><b>LockOnPlayer</b> - if the enemy has a successful lunge, it will grab onto the player.</li>
+                <li><b>death</b> - the enemy's HP is at zero. Enemy ragdolls and interrupts all other states.</li>
+              </ul>
 
-              <p>
-                A benefit of designing things this way was the innate modularity. If a designer wanted a behavior done, there was a clear translation from their
-                written word to the implementation, though often with such a model there is added code complexity. 
-              </p>
+              <p>A benefit of designing things this way was the innate modularity. If a designer wanted a behavior done, there was a clear translation to implementation.</p>
 
-              <!--BEGIN OF RANDOMNESS SECTION-->
+              <hr>
+
               <h2><b>Randomness</b></h2>
 
-                <p>
-                  One of the ways we wanted to make players feel uneasy was through randomizing attributes of 
-                  the enemy so they couldn't get a clear read on what it was doing, or thinking. One of the challenges was understanding
-                  what things about the player's behavior would impact its own behavior.
-                </p>
+              <p>One of the ways we wanted to make players feel uneasy was through randomizing attributes so they couldn't get a clear read on enemy intent.</p>
               
-                <!--BEGIN OF RANDOMNESS SUBSECTION, LUNGING-->
-                <h4>Lunging</h4>
+              <h4>Lunging</h4>
+
+              <p>Playtests revealed frustration with the lunge-locking, so this behavior was made probabilistic based on the player's equipped item: </p>
+              <ul>
+                <li><b>Holding nothing</b> - 10% chance to lunge</li>
+                <li><b>Melee weapon (pipe)</b> - 20% chance to lunge</li>
+                <li><b>Ranged weapon (nail gun)</b> - 80% chance to lunge</li>
+              </ul>
+
+              <p>This gave players a fair chance to always evade enemies, without making them entirely invulnerable.</p>
+
+
+              <div class="ratio ratio-16x9 mb-3">
+                <video autoplay loop class="rounded" muted controlslist="nofullscreen">
+                  <source src="../Images/page_somniphobia_process/somniphobia_enemy_lunge.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <h4>Health</h4>
+              <p>Health is randomly selected between 10-50 HP upon spawning. This forces players to adapt ammo conservation strategies when encountering a "tougher" variant.</p>
+
+              <div class="mb-3">
+                <img class="rounded" width="100%" src="../Images/page_somniphobia_process/somniphobia_jimmy_health.png" alt="health logic">
+              </div>
                 
-                <p>
-                  Playtests revealed frustration with the lunge-locking, so the lunge was made probabilistic.
-                </p>
+              <h4>Staggering The Enemy</h4>
+              <p>The player always has a 50% chance of staggering the enemy when landing a successful hit, providing a visible reaction to damage.</p>
 
-                <p>
-                  The general idea was that the more powerful the player's weapon was, the more likely an enemy would be aggrevated and thus aggressive toward them.
-                </p>
+              <div class="ratio ratio-16x9 mb-3">
+                <video autoplay loop class="rounded" muted controlslist="nofullscreen">
+                  <source src="../Images/page_somniphobia_process/somniphobia_enemy_stagger.mp4" type="video/mp4">
+                </video>
+              </div>
 
-                <p>
-                  Because these aggrevation factors were finite on paper, I decided upon fixed values so that we could tweak any one of them with ease without the hassle of coming up with a formula and needing
-                  to develop more systems and overhaul some just to handle this formula.
-                </p>
+              <hr>
 
-                <p>
-                  The general probability of lunging when in-range were:
-                  <ul>
-                    <li><b>If the player's holding nothing</b> - 10% chance the enemy will lunge</li>
-                    <li><b>If the player's holding a melee weapon (pipe)</b> - 20% chance the enemy will lunge</li>
-                    <li><b>If the player's holding a ranged weapon (nail gun)</b> - 80% chance the enemy will lunge</li>
-                  </ul>
-                </p>
-
-
-                <div class="ratio ratio-16x9 mb-3">
-                  <video autoplay="" loop="" class="rounded" muted="true" controlslist="nofullscreen ">
-                  <source src="../Images/page_somniphobia_process/somniphobia_enemy_lunge.mp4" type="video/mp4" alt="enemy lunge demo loop">
-                  </video>
-                </div>
-                <!--END OF RANDOMNESS SUBSECTION, LUNGING-->
-
-              
-              
-                <!--BEGIN OF RANDMONESS SUBSECTION, HEALTH-->
-                <h4>Health</h4>
-
-                <p>
-                  Randomizing the health upon spawning the enemy was pretty straight-forward: just randomly select a number between 10-50 during its initialization. 
-                </p>
-
-                <p>
-                  Notice that the HP cap is small. Since the designers wanted to put multiple enemies in one area, we needed to ensure there weren't a bunch of bullet-spongey creatures
-                  lunging at the player. However, we also didn't want all of them to die immediately, though some would. The middle-ground was that some would die faster, and
-                  some would die a little slower. We wanted to cause panic when players noticed one was taking more hits, forcing them to adapt their style in order to reserve ammo and time.
-                </p>
-
-                <div class="mb-3">
-                  <img class="rounded" width="100%" src="../Images/page_somniphobia_process/somniphobia_jimmy_health.png"></img>
-                </div>
-                <!--END OF RANDOMNESS SUBSECTION, HEALTH-->
-                
-                <!--BEGIN OF RANDOMNESS SUBSECTION, STAGGERING-->
-                <h4>Staggering The Enemy</h4>
-
-                <p>
-                  We wanted our enemy to seem imposing, but it also proved somewhat frustrating when it acted like a freight train eating up all the player's bullets. This was a bit of a balancing act:
-                  the enemy was already quite slow, so stopping it in its tracks seemed redundant. We opted to do add this detail anyway, something that was short but visible, 
-                  to give it a liveliness to its otherwise stone-like appearance.
-                </p>
-
-                <p>
-                  The player always has a 50% chance of staggering the enemy when landing a successful hit.
-                </p>
-
-                
-                <div class="ratio ratio-16x9 mb-3">
-                  <video autoplay="" loop="" class="rounded" muted="true" controlslist="nofullscreen">
-                  <source src="../Images/page_somniphobia_process/somniphobia_enemy_stagger.mp4" type="video/mp4" alt="enemy stagger demo loop">
-                  </video>
-                </div>
-                <!--END OF RANDOMNESS SUBSECTION, STAGGERING-->
-
-              <!--END OF RANDOMNESS SECTION-->
-
-              <!--BEGIN OF ANIMATIONS AND COLLISION SECTION-->
               <h2><b>Animations and Collision</b></h2>
-
-              <p>
-                One of the surprisingly neat things to experiment with was collisions on the enemy. 
-              </p>
-
-              <p>
-                At first the logic used a simple delay to spawn a collision sphere at a point near the chest of the enemy when its attack boolean activated, but this proved
-                to have inconsistent results.
-              </p>
-
-              <p>
-                Then the eureka hit: I could send notifications through the animation system to set state values. This offered near frame-perfect collision queries.
-              </p>
+              <p>I used notifications through the animation system to set state values, offering near frame-perfect collision queries and finer-grain control compared to simple delays activated based on the animation's start and duration.</p>
               
               <div class="mb-3">
                 <div class="ratio ratio-16x9">
-                  <video autoplay="" loop="true" class="rounded" muted="true" controlslist="nofullscreen">
-                    <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackanim.mp4" type="video/mp4" alt="enemy attack in animator demo loop">
+                  <video autoplay loop class="rounded" muted controlslist="nofullscreen">
+                    <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackanim.mp4" type="video/mp4">
                   </video>
                 </div>
-                <div class="text-secondary">animation made by me in Blender -- baby's first!</div>
+                <div class="text-secondary text-center">Animation made in Blender - baby's first!</div>
               </div>
-              
               
               <div class="ratio ratio-16x9 mb-3">
-                <video autoplay="" loop="" class="rounded" muted="true" controlslist="nofullscreen">
-                <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackandcollisions.mp4" type="video/mp4" alt="enemy attack collision sphere demo loop">
+                <video autoplay loop class="rounded" muted controlslist="nofullscreen">
+                  <source src="../Images/page_somniphobia_process/somniphobia_enemy_attackandcollisions.mp4" type="video/mp4">
                 </video>
               </div>
-              <!--END OF ANIMATIONS AND COLLISION SECTION-->
-
-
             </div>
           </div>
         </div>
-    <!--END OF ACCORDION-->
- 
+      </div>
+    </div>
 
-    <div class="container text-center" style="font-family: Arial; margin-top: 10px;">
+    <div class="container text-center mt-4 mb-5" style="font-family: Arial;">
       <div class="row">
         <div class="col">
-          <div class="text-white border border-dark bg-info rounded">
+          <div class="text-white border border-dark bg-info rounded p-1">
             <em><b>Credits:</b></em>
           </div>
-          <ul style="text-align: left; list-style-type: none;">
-            <li>-<b>Jordan Fowler</b> - Level Designer</li>
-            <li>-<b>Aaron Hansen</b> - Programmer, AI, Randomization</li>
-            <li>-<b>Michael Haynes</b> - Producer, Programmer, Level Generation, Particles</li>
-            <li>-<b>Gabe Hoefler</b> - Narrative Director</li>
-            <li>-<b>Caleb Kissinger</b> - Programmer, AI, Animation Lead, Shaders/Materials</li>
-            <li>-<b>Dong Ta</b> - Audio Lead</li>
-            <li>-<b>Haoran Wang</b> - Tech Lead, Level Generation</li>
-            <li>-<b>Nathan Fallon</b> - UI/UX Programmer and Designer</li>
-            <li>-<b>Liam Binford</b> - Programmer, Level Generation, Fog</li>
+          <div class="mt-3 text-start"><b>Team:</b> <em>Ad Space Reserved</em> | Fall 2023 - Spring 2024 (Junior Year)</div>
+          <ul class="mt-3 text-start" style="list-style-type: none; padding-left: 0;">
+            <li>* <b>Jordan Fowler</b> - Level Designer</li>
+            <li>* <b>Aaron Hansen</b> - Programmer, AI, Randomization</li>
+            <li>* <b>Michael Haynes</b> - Producer, Programmer</li>
+            <li>* <b>Gabe Hoefler</b> - Narrative Director</li>
+            <li>* <b>Caleb Kissinger</b> - Programmer, AI, Animation Lead, Shaders/Materials</li>
+            <li>* <b>Dong Ta</b> - Audio Lead</li>
+            <li>* <b>Haoran Wang</b> - Tech Lead</li>
+            <li>* <b>Nathan Fallon</b> - UI/UX Programmer</li>
+            <li>* <b>Liam Binford</b> - Programmer</li>
           </ul>
         </div>
       </div>
     </div>
-
   </body>
 </html>

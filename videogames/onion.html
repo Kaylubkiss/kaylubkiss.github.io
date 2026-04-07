@@ -4,82 +4,220 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href=
-        "../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../stylesheets/parastyles.css">
     <link rel="stylesheet" href="../font-awesome/css/all.min.css">
-    <script type="module" src="../Javascript/navigation.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Ensuring carousel captions appear below images as requested in previous context */
+        .carousel-caption {
+            position: static;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        .carousel-indicators {
+            position: relative;
+            bottom: 0;
+            margin-top: 10px;
+        }
+    </style>
 </head>
- 
-<div class="container mt-3">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb rounded">
-      <li class="breadcrumb-item"><a href="../homepage.html">Caleb's Collection</a></li>
-      <li class="breadcrumb-item active" aria_current="page">Onion Game</li>
-    </ol>
-  </nav>
-</div>
 
 <body>
-   <div class="container mt-3">
-    <h1 style="font-family: Arial;"><b>Nowhere to Grow</b>
-        <a href="https://games.digipen.edu/games/nowhere-to-grow">
-          <button class="btn btn-primary pl-2 pr-2" ><i class="fa fa-gamepad"></i> Play on DigiPen Game Gallery</button>
-        </a>
-    </h1>
-    <div class="ratio ratio-16x9">
-      <iframe class="rounded" src="https://www.youtube.com/embed/lMjqA9yCt-8?si=cb4_9cJvVI1g1W64" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb rounded">
+                <li class="breadcrumb-item"><a href="../index.html">Caleb's Collection</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Onion Game</li>
+            </ol>
+        </nav>
     </div>
-   </div>
 
-   <div class="container mt-2">
-       <div class="text-dark border bg-light rounded">
-         <p>
-           The second-ever game I made while attending DigiPen. 
-           I was excited to work with a team of energetic people, if not a bit
-           intimidated. I leveraged my previous experience with animation and storytelling
-           to pull together the heart of the game. Systems weren't coming easy for me, 
-           on the other hand. 
-         </p>
-       </div>
-     </div>
+    <div class="container mt-3">
 
-     <div class="container text-center" style="font-family: Arial; margin-top: 10px;">
-       <div class="row">
+        <h1 style="font-family: Arial;"><b>Nowhere to Grow</b></h1>
 
-         <div class="col">
-           <div class="text-white border border-dark bg-info rounded">
-             <em><b>Credits:</b></em>
-           </div>
-           <ul style="text-align: left; list-style-type: none;">
-               <li>-<b>Alex Elizarov</b> - Programmer, Engine</li>
-               <li>-<b>Caleb Kissinger</b> - Programmer, Story</li>
-               <li>-<b>Corbyn Lamar</b> - Programmer, Gameplay</li>
-               <li>-<b>K Preston</b> - Programmer, Audio</li>
-               <li>-<b>Salem Richie</b> - Programmer, Gameplay, Engine</li>
-               <li>-<b>Ashlyn White</b> - Programmer, Gameplay</li>
-           </ul>
-         </div>
-         
-         <div class="col-sm">
-           <div class="border border-dark rounded">
-             <b>Personal Contributions:</b>
-           </div>
-           <div class="list_center">
-               <ul class="list_style">
-                   <li>gameplay (player movement)</li>
-                   <li>gameplay objects (windmill and cloud)</li> 
-                   <li><a href="onion_process.html">story writing and implementation</a></li> 
-                   <li>level design</li>
-                   <li>camera code framework (targeting player position and lerping to that position)</li>
-                   <li>implemented and created cutscenes (visuals only)</li>
-                   <li>I edited this trailer!</li>
-               </ul>
-             </div>
-           </div>
-         </div>
-       </div>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <div class="ratio ratio-16x9">
+            <iframe class="rounded" src="https://www.youtube.com/embed/lMjqA9yCt-8?si=cb4_9cJvVI1g1W64" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="https://games.digipen.edu/games/nowhere-to-grow">
+                <button class="btn btn-primary pl-2 pr-2">
+                    <i class="fa fa-gamepad"></i> Play on DigiPen Game Gallery
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="accordion" id="onionProcessAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingStory">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStory" aria-expanded="true" aria-controls="collapseStory">
+                        <h3 style="font-family: Arial;"><b>Story Development</b></h3>
+                    </button>
+                </h2>
+                <div id="collapseStory" class="accordion-collapse collapse show" aria-labelledby="headingStory" data-bs-parent="#onionProcessAccordion">
+                    <div class="accordion-body">
+
+                        <div class="display-4 text-dark" style="font-family: Arial;">
+                            Concept Phase
+                        </div>
+
+                        <div id="originalVisionCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-inner mt-3">
+                                <div class="carousel-item active text-center">
+                                    <img class="w-75" src="../Images/page_onion_process/onion_lonely.png" alt="First slide">
+                                    <div class="carousel-caption">
+                                        <p class="text-dark">Our game was set to star a little onion</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item text-center">
+                                    <img class="w-75" src="../Images/page_onion_process/onion_rat_cropped.png" alt="Second slide">
+                                    <div class="carousel-caption">
+                                        <p class="text-dark">The chef had a friend, and wanted to cook the onion.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item text-center">
+                                    <img class="w-75" src="../Images/page_onion_process/onion_chef_cropped.png" alt="Third slide">
+                                    <div class="carousel-caption">
+                                        <p class="text-dark">The player would have to fight the chef, our version of Bowser. </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item text-center">
+                                    <img class="w-75" src="../Images/page_onion_process/onion_garden.png" alt="Fourth slide">
+                                    <div class="carousel-caption">
+                                        <p class="text-dark">The onion escapes the chef, free to venture forth.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item text-center">
+                                    <img class="w-75" src="../Images/page_onion_process/onion_bird_cropped.png" alt="Fifth slide">
+                                    <div class="carousel-caption">
+                                        <p class="text-dark">The onion meets a friend in the gardens!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#originalVisionCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#originalVisionCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#originalVisionCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#originalVisionCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#originalVisionCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#originalVisionCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#originalVisionCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <div class="mt-4">
+                            <div class="display-4 text-dark" style="font-family: Arial;">A New Direction...</div>
+                            <p>The development of the tech took a certain toll on the team.
+                                We built physics, collisions, a level editor, game mechanics, some crude art assets,
+                                but still no story, no "bottom."
+                            </p>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="../Images/page_onion_process/onion_initial_intro.mp4" type="video/mp4" alt="Onion Video">
+                                </video>
+                            </div>
+                            <div class="bg-light rounded p-3 mt-3">
+                                <p>This was my first draft of the opening cutscene. I wanted to highlight the emotion of the character, give a literal statement: "this onion is SAD". I love a little cheekiness.</p>
+                                <p>The closeup, however, terrified my teammates.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="../Images/page_onion_process/onion_intro_precolor.mp4" type="video/mp4" alt="Onion Intro Final Video">
+                                </video>
+                            </div>
+                            <div class="bg-light rounded p-3 mt-3">
+                                <p>I thought to then widen the shot, and put our character in a scenario: asleep, in a field. I also introduce the glowing goal throughout the game, make the scene even more purposeful by giving the players an idea of what the main action is.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="../Images/page_onion_process/in-game_story.mp4" type="video/mp4" alt="in-game text">
+                                </video>
+                            </div>
+                            <div class="bg-light rounded p-3 mt-3">
+                                <p>We needed to be building towards a climactic end, as we didn't make an in-game boss. My solution: put in "thought text" throughout the levels.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            <img class="w-75 rounded" src="../Images/page_onion_process/onion_ending_original.png" alt="ending frame">
+                            <div class="bg-light rounded p-3 mt-3 text-start">
+                                I'm a sucker for sappy endings. This scene took a few tries to get the emotion right. Here's a long shot, showing what's missing from this little onion's life.
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="../Images/page_onion_process/onion_final_scene_initial.mp4" type="video/mp4" alt="ending frame">
+                                </video>
+                            </div>
+                            <div class="bg-light rounded p-3 mt-3">
+                                <p>An earlier version of this shot had a more quiet ending.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="../Images/page_onion_process/onion_final_scene_final_nocolor.mp4" type="video/mp4" alt="ending frame">
+                                </video>
+                            </div>
+                            <div class="bg-light rounded p-3 mt-3">
+                                <p>I instead took a more connected approach to the game by including the glowing orb.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-5 mt-5 text-center">
+                            <img width="100%" src="../Images/page_onion_process/onion_ending_frames293.png" alt="ending frame">
+                        </div>
+
+                    </div> </div> </div> </div> </div> <div class="container mt-4">
+    </div>
+
+    <div class="container text-center mt-4 mb-5" style="font-family: Arial;">
+        <div class="row">
+            <div class="col">
+                <div class="text-white border border-dark bg-info rounded">
+                    <em><b>Credits:</b></em>
+                
+                </div>
+                
+                <div class="mt-3" style="text-align: left;"><b>Team:</b> <em>Trowel and Error</em> | Spring 2021 (Freshman Year)</div>
+             
+                <ul class="mt-3" style="text-align: left; list-style-type: none;">
+                    <li>* <b>Alex Elizarov</b> - Programmer, Engine</li>
+                    <li>* <b>Caleb Kissinger</b> - Programmer, Story</li>
+                    <li>* <b>Corbyn Lamar</b> - Programmer, Gameplay</li>
+                    <li>* <b>K Preston</b> - Programmer, Audio</li>
+                    <li>* <b>Salem Richie</b> - Programmer, Gameplay, Engine</li>
+                    <li>* <b>Ashlyn White</b> - Programmer, Gameplay</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
 
+</html>
