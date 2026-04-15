@@ -92,12 +92,11 @@
                     <div style="text-align: left; margin-top: 5px;">
                         <b>Contributions:</b>
                         <ul>
-                            <li>Physically-Based Rendering with Deferred Shading</li>
-                            <li>Geometry shader that efficiently projects multiple depth maps into image layers for sampling</li>
-                            <li>Non-blocking I/O that loads <em>.obj</em> and <em>.gltf</em> geometry and texture data with the use of a transfer queue on the GPU for image layout transitions. </li>
-                            <li>Cross-platform build automation with CMake for Windows and Linux systems</li>
-                            <li>Hot-reloading with <em>fstat()</em> and <em>shaderc</em> integration</li>
-                            <li>Rigidbody physics with <em>ReactPhysics3D</em> integration</li>
+                            <li>Physically-Based Rendering with Deferred Shading, and a Geometry Shader that 
+                                produces multiple shadow maps into image layers for sampling in one pass, reducing CPU overhead.</li>
+                            <li>Non-blocking I/O that loads <em>.obj</em> and <em>.gltf</em> assets with the use of a dedicated transfer queue on the GPU for texture image layout transitions.</li>
+                            <li>Cross-platform build automation with CMake for Windows and Linux systems.</li>
+                            <li>Hot-reloading with <em>fstat()</em> and <em>shaderc</em> integration.</li>
                         </ul>
                     </div>
                 </div>
